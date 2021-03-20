@@ -1,0 +1,17 @@
+.form{
+    color: white;
+    margin: 2% auto;
+    width: 40%;
+}
+.title{
+    text-align: center;
+    margin: 0.5% auto;
+}
+
+.a{
+    background: #9400D3;
+    border-radius: 5px;
+    height: 60px;
+    width: 725px;
+    margin-left: 20%;
+}

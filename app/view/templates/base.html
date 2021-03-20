@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/388a226fb7.js" crossorigin="anonymous"></script>
+    <title>Neto Palmirinho</title>
+    <link href="{{url_for('static', filename='/css/base.css')}}" rel="stylesheet">
+    {% block extra_css %}{% endblock extra_css %}
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>Neto Palmirinho</h1>
+                <h4>A receita perfeita para a refeição perfeita!</h4>
+            </div>
+            <div class="nav">
+                <a id="home" href="{{ url_for('home') }}">
+                    <span class="text-nav">Home</span>
+                    <i class="fas fa-home"></i>
+                </a>
+                <a id="receitas" href="{{ url_for('receitas_list') }}">
+                    <span class="text-nav">Receitas</span>
+                    <i class="fas fa-book"></i>
+                </a>
+                <a href="">
+                    <span class="text-nav">Criar Receita</span>
+                    <i class="fa fa-pencil-square-o"></i>
+                </a>
+                <a id="ingredientes" href="{{ url_for('ingrediente_list') }}">
+                    <span class="text-nav">Ingredientes</span>
+                    <i class="fas fa-carrot"></i>
+                </a>
+                <a id="create" href="{{ url_for('ingrediente_create') }}">
+                    <span class="text-nav">Criar Ingrediente</span>
+                    <i class="fas fa-plus"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+
+    {% endblock content %}
+</body>
+</html>

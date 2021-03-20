@@ -1,0 +1,32 @@
+.quadrado{
+    margin: 2% auto;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    background: #9400D3;
+    position: center
+}
+
+.title{
+    text-align: center;
+}
+
+.a {
+    margin-left: 10%;
+    position: center;
+    text-align: left;
+    text-align-last: left;
+    line-height: 1.5em;
+    display: inline;
+}
+
+.item{
+    position: center;
+    color: white;
+}
+
+.title{
+    position: center;
+    margin: 1%;
+    font-weight: bold;
+}

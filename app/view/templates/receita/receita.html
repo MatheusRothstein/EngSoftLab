@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='/css/receitas.css') }}" rel="stylesheet" type="text/css">
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="title">
+        <h3>Estas são as receitas adicionadas, use com sabedoria.</h3>
+    </div>
+    <div class="quadrado">
+        <ul class="a">
+            {% for receita in receitas %}
+            <a href="{{ url_for ( 'receita_etapas' , receitaID = receita.id ) }}">
+                <li class="item">
+                    {{ receita.nome }}
+                </li>
+            </a>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}

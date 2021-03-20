@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='/css/etapas.css') }}" rel="stylesheet" type="text/css">
+{% endblock extra_css %}
+
+
+{% block content %}
+    <div class="title">
+        {{ receita.nome }}
+    </div>
+    <div class="quadrado">
+        <ul class="a">
+            <h4>Ingredientes necessários:</h4>
+            {% for ingrediente in receita.ingredientes %}
+                <li class="item">
+                    {{ ingrediente.nome }}
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="a">
+            <h4>Modo de preparo:</h4>
+            {% for etapa in receita.etapas %}
+                <li class="item">
+                    {{ etapa.numero }}
+                    {{ etapa.descricao }}
+                </li>
+            {% endfor %}
+        </ul>
+
+    </div>
+{% endblock content %}

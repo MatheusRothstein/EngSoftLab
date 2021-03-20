@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='/css/list.css') }}" rel="stylesheet" type="text/css">
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="title">
+        <h3>Estes são os ingredientes adicionados, use com sabedoria.</h3>
+    </div>
+    <div class="quadrado">
+        <ul class="a">
+            {% for ingrediente in ingredientes %}
+                <li class="item">
+                    {{ ingrediente.nome }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock content %}
