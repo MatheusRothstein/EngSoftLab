@@ -21,4 +21,8 @@
 
 ## Para iniciar a aplicação
 >> python -m flask run
+>> 
+
+## Link do YouTube para a primeira entrega 
+https://youtu.be/tW993IvI7Ss
 
