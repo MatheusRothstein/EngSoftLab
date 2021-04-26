@@ -34,3 +34,8 @@ def receita_etapas(receitaID):
     etapas = receita.etapas
     return render_template('receita/etapas.html', receita=receita)
 
+@app.route('/receitas/create', methods=['GET', 'POST'])
+def receita_create():
+    ingredientes = Ingrediente.list()
+    return render_template('receita/criarReceita.html', ingredientes=ingredientes)
+
