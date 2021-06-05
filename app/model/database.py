@@ -40,7 +40,11 @@ class Etapa(db.Model):
     def __repr__(self):
         return '<Receita %r>' % self.nome
 
+    def create(self):
+        db.session.add(self)
+        db.session.commit()
 
+    
 class Receita(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(80), unique=True, nullable=False)
@@ -55,3 +59,7 @@ class Receita(db.Model):
     @classmethod
     def list_receitas(cls):
         return cls.query.all()
+    
+    def create(self):
+        db.session.add(self)
+        db.session.commit()

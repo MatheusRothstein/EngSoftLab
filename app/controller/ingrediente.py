@@ -1,5 +1,5 @@
-from app import app
-from app.model.database import Ingrediente, Receita, ingredientes
+from app import app, db
+from app.model.database import Ingrediente, Receita, ingredientes, Etapa
 from flask import render_template, request, redirect, url_for
 
 
@@ -37,5 +37,24 @@ def receita_etapas(receitaID):
 @app.route('/receitas/create', methods=['GET', 'POST'])
 def receita_create():
     ingredientes = Ingrediente.list()
-    return render_template('receita/criarReceita.html', ingredientes=ingredientes)
+    if request.method == 'POST':
+        ingredientes = request.form.getlist('ingredientes')
+        etapas = request.form.get('descricao').split(',')
+        nome = request.form.get('nome')
 
+        receita = Receita(nome=nome)
+
+        for ingrediente in ingredientes:
+            ing = Ingrediente.query.filter_by(id=ingrediente).first()
+            receita.ingredientes.append(ing)
+        
+        for index, etapa in enumerate(etapas):
+            etp = Etapa(descricao=etapa, numero=index + 1)
+            etp.create()
+            receita.etapas.append(etp)
+
+        db.session.add(receita)
+        db.session.commit()
+        return redirect(url_for('receitas_list'))
+    
+    return render_template('receita/criarReceita.html', ingredientes=ingredientes)

@@ -1,7 +1,6 @@
 .all{
     color: white;
-    margin: 2% auto;
-    width: 40%;
+    margin-top: 2% auto;
 }
 .title{
     text-align: center;
@@ -11,6 +10,35 @@
 .a{
     background: #9400D3;
     border-radius: 5px;
-    width: 725px;
-    margin-left: 20%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center; 
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.droplist{
+    margin-top: 5px;
+    align-items: center;
+}
+
+.descri{
+    margin-top: 5px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.interna{
+    margin-top: 5px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.nomeIng{
+    color: white;
 }

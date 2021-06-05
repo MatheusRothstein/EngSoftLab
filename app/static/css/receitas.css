@@ -2,28 +2,16 @@
     margin: 1% auto;
     width: 60%;
     border-radius: 10px;
-    display: flex;
     background: #9400D3;
-    position: center
+    position: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .title{
     text-align: center;
 }
 
-.a {
-    margin-left: 25%;
-    position: center;
-    text-align: left;
-    text-align-last: left;
-    columns: 2;
-    list-style-position: inside;
-    line-height: 1.5em;
-    float: left;
-    display: inline;
-}
-
-.item{
-    position: center;
+a{
     color: white;
 }

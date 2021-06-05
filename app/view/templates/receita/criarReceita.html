@@ -10,23 +10,24 @@
     </div>
     <div class="a">
         <form class="all" method="POST">
-            Nome da receita: <input type="text" name="nome" id="nome_id">
+            <div class="interna">
+            Nome da receita: <input required type="text" name="nome" id="nome_id">
+            </div>
+            <div class="droplist">
+                <div class="text">Insira os ingredientes Desejados</div>
+                <select multiple required name="ingredientes" id="ingredientes">
+                    {% for ingrediente in ingredientes %}
+                        <option value="{{ingrediente.id}}">{{ ingrediente.nome }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="descri">
+                <div>Descreva os passos, separados por uma vírgula:</div>
+                <textarea required name="descricao" id="descricao_id" cols="60" rows="10"></textarea>
+            </div>
+            <button type="submit">enviar receita</button>
         </form>
-        <div class="all">
-            <label for="ingredientes">insira os ingredientes necessários:</label>
-            <select name="ingredientes" id="ingredientes">
-                {% for ingrediente in ingredientes %}
-                    <option value="ingrediente">{{ ingrediente.nome }}</option>
-                {% endfor %}
-            </select>
-            <button><i class="fas fa-plus"></i></button>
-        </div>
-        <div class ="all">
-            <form method="POST">
-                Descreva o passo a passo da receita: <input name="descricao" id="">
-            </form>
-            <button><i class="fas fa-plus"></i></button>
-        </div>
+        
     </div>
 
 {% endblock content %}

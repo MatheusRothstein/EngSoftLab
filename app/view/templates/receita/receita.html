@@ -9,13 +9,13 @@
         <h3>Estas são as receitas adicionadas, use com sabedoria.</h3>
     </div>
     <div class="quadrado">
-        <ul class="a">
+        <ul>
             {% for receita in receitas %}
-            <a href="{{ url_for ( 'receita_etapas' , receitaID = receita.id ) }}">
-                <li class="item">
+                <li>
+                    <a href="{{ url_for ( 'receita_etapas' , receitaID = receita.id ) }}">
                     {{ receita.nome }}
+                    </a>
                 </li>
-            </a>
             {% endfor %}
         </ul>
     </div>
