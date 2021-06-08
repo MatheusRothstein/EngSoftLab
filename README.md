@@ -27,3 +27,5 @@
 ## Link do YouTube para a primeira entrega 
 https://youtu.be/tW993IvI7Ss
 
+## Link do YouTube para a segunda entrega (entrega final)
+https://youtu.be/xez_fsscq-Q
