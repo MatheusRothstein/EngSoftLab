@@ -16,7 +16,8 @@
 >> python -m flask shell
 
 ## Dentro do shell para criar o banco de dados
->> from app.model.database import db 
+>> from app.model.database import db
+>> 
 >> db.create_all()
 
 ## Para iniciar a aplicação
